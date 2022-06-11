@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<input id="a" type="number" onchange="tinhToan()"/>
-<input id="b" type="number" onchange="tinhToan()"/>
+<input id="a" type="number" oninput="tinhToan()"/>
+<input id="b" type="number" oninput="tinhToan()"/>
 <p id="result"></p>
 <script>
     function tinhToan() {
@@ -16,6 +16,8 @@
             let a = document.getElementById("a").value;
             let b = document.getElementById("b").value;
             document.getElementById("result").innerHTML = "a^2 = " + a * a + "<br/>" + " a^b = " + Math.pow(a, b);
+        }else{
+            document.getElementById("result").innerHTML ="";
         }
     }
 </script>

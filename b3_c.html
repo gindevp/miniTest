@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<input id="a" type="number" onchange="tinhToan()"/>
-<input id="b" type="number" onchange="tinhToan()"/>
+<input id="a" type="number" oninput="tinhToan()"/>
+<input id="b" type="number" oninput="tinhToan()"/>
 <p id="result"></p>
 <script>
     function tinhToan() {
@@ -20,6 +20,8 @@
 
             }
             document.getElementById("result").innerText = sum;
+        }else{
+            document.getElementById("result").innerHTML ="";
         }
 
 
