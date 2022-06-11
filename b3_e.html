@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+</head>
+<body>
+<h1>hello world</h1>
+<input type="number" oninput="tamGiac()" id="a"/>
+<input type="number" oninput="tamGiac()" id="b"/>
+<input id="c" type="number" oninput="tamGiac()"/>
+<p id="view"></p>
+<p id="views"></p>
+<script>
+
+    function tamGiac() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        let c = Number(document.getElementById("c").value);
+        let view = document.getElementById("view");
+        let views= document.getElementById("views");
+        {
+            if (a < 0 || b < 0 || c < 0) {
+                view.innerText = "Sai rồi mời bạn nhập lại (a,b,c>0)";
+            } else {
+                if (a + b > c && a + c > b && b + c > a) {
+                    view.innerText = "Tồn tại tam giác a,b,c";
+                    if (a == b || b == c || c == a) {
+                        views.innerText = "Tam giác a,b,c cân";
+
+                    }else{
+                        views.innerText="";
+                    }
+                    if (a ==  b&&b == c) {
+                        views.innerText = "Tam giác a,b,c đều";
+                    }
+                } else {
+                    if (a !== 0 && b !== 0 && c !== 0) {
+                        view.innerText = "Không tồn tại tam giác a,b,c";
+                        views.innerText="";
+                    }
+
+
+                }
+
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

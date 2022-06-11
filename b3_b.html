@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="a" type="number" onchange="tinhToan()"/>
+<input id="b" type="number" onchange="tinhToan()"/>
+<p id="result"></p>
+<script>
+    function tinhToan() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        if (a !== "" && b !== "") {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            document.getElementById("result").innerHTML = "a^2 = " + a * a + "<br/>" + " a^b = " + Math.pow(a, b);
+        }
+    }
+</script>
+</body>
+</html>

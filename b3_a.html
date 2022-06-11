@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="a" type="number" onchange="hinhVuong()"/>
+<p id="result"></p>
+<script>
+    function hinhVuong() {
+        let a = document.getElementById("a").value;
+        if (a < 0) {
+            alert("nhập sai rồi mời bạn nhập lại (a lớn hơn 0) :")
+
+        } else {
+            let chuVi = a * 4;
+            let dienTich = a * a;
+            document.getElementById("result").innerText = "chu vi: " + chuVi + " diện tích: " + dienTich;
+        }
+    }
+</script>
+</body>
+</html>
